@@ -1,0 +1,11 @@
+.vscode
+.idea
+node_modules
+*.log
+logs
+config/*
+!config/test.json
+!config/dev.json
+.nyc_output
+coverage
+dist

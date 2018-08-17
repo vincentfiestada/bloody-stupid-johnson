@@ -1,0 +1,45 @@
+{
+  "name": "bloody-stupid-johnson",
+  "version": "0.0.1",
+  "description": "Translates JSONSchema to SQL Table definitions",
+  "main": "dist/cli.js",
+  "scripts": {
+    "build": "tsc",
+    "prestart": "yarn run build",
+    "start": "node dist/cli.js",
+    "start-ts": "ts-node src/cli.ts",
+    "pretest": "yarn run prestart",
+    "test": "mocha -u bdd dist/test/***Test.js --reporter='nyan'",
+    "coverage": "nyc --reporter=lcovonly yarn run test",
+    "coverage-report": "yarn run coverage; nyc report"
+  },
+  "author": {
+    "name": "Vincent Paul Fiestada",
+    "email": "vffiestada@gmail.com"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "private": true,
+  "devDependencies": {
+    "@types/chai": "^4.1.3",
+    "@types/chai-as-promised": "^7.1.0",
+    "@types/lodash": "^4.14.109",
+    "@types/mocha": "^5.2.0",
+    "@types/node": "^10.1.3",
+    "@types/ora": "^1.3.4",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "nyc": "^11.8.0",
+    "ts-node": "^6.0.5",
+    "typescript": "^2.8.3"
+  },
+  "dependencies": {
+    "ajv": "^6.5.0",
+    "chalk": "^2.4.1",
+    "commander": "^2.15.1",
+    "lodash": "^4.17.10",
+    "ora": "^2.1.0",
+    "yarn": "^1.7.0"
+  }
+}

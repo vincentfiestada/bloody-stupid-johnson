@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "primaryKey": ["id"],
+  "type": "object",
+  "required": ["id", "level", "class"],
+  "properties": {
+    "id": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2147483647
+    },
+    "level": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 25
+    },
+    "class": {
+      "type": "string",
+      "enum": ["knight", "warrior", "wizard", "enchanter", "ranger", "rogue", "wayfarer"]
+    },
+    "xp": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 10000000
+    },
+    "mainWeapon": {
+      "type": "string"
+    },
+    "meta": {
+      "type": "object"
+    },
+    "is_playable": {
+      "type": "boolean"
+    },
+    "avatar": {
+      "instanceof": "Buffer"
+    }
+  }
+}
